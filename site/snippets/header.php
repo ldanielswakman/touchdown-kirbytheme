@@ -1,26 +1,41 @@
 <!doctype html>
+
 <html lang="<?= site()->language() ? site()->language()->code() : 'en' ?>">
-<head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <head>
 
-  <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
-  <meta name="description" content="<?= $site->description()->html() ?>">
+    <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
 
-  <?= css('assets/css/index.css') ?>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="L Daniel Swakman, ldaniel.eu" />
+    <meta http-equiv="Cache-control" content="public">
 
-</head>
-<body>
+    <meta name="description" content="<?= $site->description()->html() ?>">
+    <meta name="keywords" content="">
 
-  <header class="header wrap wide" role="banner">
-    <div class="grid">
+    <!-- Social share parameters -->
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="<?= $page->title()->html() ?>" />
+    <meta property="og:site_name" content="<?= $site->title()->html() ?>" />
+    <meta property="og:description" content="<?= $site->description()->html() ?>" />
 
-      <div class="branding column">
-        <a href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
-      </div>
+    <?
+    $js_assets = [
+      'assets/js/jquery-2.2.3.min.js',
+      'assets/js/jquery.smooth-scroll.min.js',
+      'assets/js/sticky-kit.min.js',
+      'assets/js/scripts.js'
+    ];
+    $css_assets = [
+      'assets/css/flexboxgrid.min.css',
+      'assets/css/style.css'
+    ];
+    ?>
+    
+    <?= js($js_assets) ?>
+    <?= css($css_assets) ?>
 
-      <?php snippet('menu') ?>
+  </head>
 
-    </div>
-  </header>
+  <body>

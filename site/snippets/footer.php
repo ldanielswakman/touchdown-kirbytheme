@@ -1,18 +1,17 @@
-  <footer class="footer cf" role="contentinfo">
-    <div class="wrap wide">
+    <footer class="u-pv2">
 
-      <p class="footer-copyright"><?php
-        // Parse Kirbytext to support dynamic year,
-        // but remove all HTML like paragraph tags:
-        echo html::decode($site->copyright()->kirbytext())
-      ?></p>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-3 u-pv2 u-vcentre">
+          <a href="index.html">&larr; See more apps by Terra</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 u-pv2 u-alignright u-vcentre">
+          <small><a href="index.html">based on App Onepager</a></small><br>
+          <small><a href="index.html">designed and built by ldaniel.eu</a></small>
+        </div>
+      </div>
 
-      <p class="footer-madewithkirby">
-        <a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b class="heart">♥</b></a>
-      </p>
-    
-    </div>
-  </footer>
+    </footer>
 
-</body>
+  </body>
+
 </html>
